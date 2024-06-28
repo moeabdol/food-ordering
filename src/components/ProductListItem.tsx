@@ -1,5 +1,5 @@
-import Colors from '@/src/constants/Colors';
-import type { Product } from '@/src/types';
+import type { Product } from '@/types';
+import Colors from '@constants/Colors';
 import React from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
 
@@ -25,13 +25,16 @@ function ProductListItem({ product }: ProductListItemProps) {
 
 const styles = StyleSheet.create({
 	container: {
+		flex: 1,
 		backgroundColor: 'white',
 		padding: 10,
 		borderRadius: 20,
+		maxWidth: '50%',
 	},
 	image: {
 		width: '100%',
 		aspectRatio: 1,
+		resizeMode: 'contain',
 	},
 	title: {
 		fontSize: 18,
