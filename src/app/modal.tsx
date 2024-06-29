@@ -1,5 +1,5 @@
-import EditScreenInfo from '@/src/components/EditScreenInfo';
-import { Text, View } from '@/src/components/Themed';
+import EditScreenInfo from '@components/EditScreenInfo';
+import { Text, View } from '@components/Themed';
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { Platform, StyleSheet } from 'react-native';
