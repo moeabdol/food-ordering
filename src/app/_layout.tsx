@@ -1,3 +1,4 @@
+import CartProvider from '@/providers/CartProvider';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { DefaultTheme, ThemeProvider } from '@react-navigation/native';
 import { useFonts } from 'expo-font';
@@ -46,10 +47,12 @@ export default function RootLayout() {
 function RootLayoutNav() {
 	return (
 		<ThemeProvider value={DefaultTheme}>
-			<Stack>
-				<Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-				<Stack.Screen name="modal" options={{ presentation: 'modal' }} />
-			</Stack>
+			<CartProvider>
+				<Stack>
+					<Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+					<Stack.Screen name="cart" options={{ presentation: 'modal' }} />
+				</Stack>
+			</CartProvider>
 		</ThemeProvider>
 	);
 }
